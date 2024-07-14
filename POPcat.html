@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>poppuay</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <center>
+        <h1>จำนวนคลิก</h1>
+        <p id="demo">0</p>
+    </center>
+    <script>
+        let c = 1;
+
+        function count() {
+            const x = document.getElementById("demo");
+            x.innerHTML = c++;
+        }
+
+        function changeImage() {
+            count();
+            const element = document.getElementById('myimage');
+            if (element.src.includes("pop.png")) {
+                element.src = "puy.png";
+                setTimeout(function(){
+                    element.src = "pop.png";
+                }, 200);
+            } else {
+                element.src = "pop.png";
+            }
+        }
+    </script>
+    <center>
+        <p>
+            <img style="width:500px;height:500px;" id="myimage" onclick="changeImage()" src="pop.png" width="100" height="180">
+            <p>เว็บไซต์ทดสอบ 1.0 ของทีม Erinzay Dev / Zaimon Dev</p>
+    </center>
+
+</body>
+
+</html>
+
